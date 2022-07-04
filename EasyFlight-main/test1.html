@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game test</title>
+    <style>
+        body{
+            background-color: rgb(44, 26, 26);
+        }
+        #ba,#bb,#bc{
+            border: double rgb(224, 211, 211);
+            background-color: black;
+            color:rgb(224, 211, 211);
+            border-radius: 20%;
+        }
+        .text{
+            color:rgb(224, 211, 211);
+        }       
+    </style>
+    <style>
+        #ba,#bb,#bc{
+            height:200px;
+            width: 250px;
+            font-size: 50px;
+        }
+        .text{
+            height: 50%;
+            align-content: center;
+        }
+        #buttons{
+            margin-top:0;
+            display: flex;
+            justify-content: space-around;
+        }
+        #dec{
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+        <div class="text">
+            <span id="dec">Your Call</span>
+        </div>
+        <div id="buttons">
+            <button id="ba" onclick="random1()">Rock</button>
+            <button id="bb" onclick="random2()">Paper</button>
+            <button id="bc" onclick="random3()">Scissor</button>
+        </div>
+        <script>
+            function random1()
+            {
+                let a = Math.floor(Math.random() * 3);
+                const x=0;
+                if (a==x){
+                    document.getElementById("dec").innerHTML="Draw";
+                    //window.alert('tie');
+                    abcd="Your call: Rock, Cpu call: Rock";
+                    document.getElementById("abc").innerHTML=abcd;
+                    }
+                else if(a==2){
+                    document.getElementById("dec").innerHTML="You Lose";
+                    //window.alert('You Lose')
+                    }
+                else{
+                    document.getElementById("dec").innerHTML="You Win";
+                    //window.alert('You won')
+                    }
+            }
+            function random2()
+            {
+                let a = Math.floor(Math.random() * 3);
+                const x=1;
+                if (a==x){
+                    document.getElementById("dec").innerHTML="Draw";
+                    //window.alert('tie');
+                    }
+                else if(a==0){
+                    document.getElementById("dec").innerHTML="You Lose";
+                    //window.alert('You Lose')
+                    }
+                else{
+                    document.getElementById("dec").innerHTML="You Win";
+                    //window.alert('You won')
+                    }
+            }            
+            function random3()
+            {
+                let a = Math.floor(Math.random() * 3);
+                const x=2;
+                if (a==x){
+                    document.getElementById("dec").innerHTML="Draw";
+                    //window.alert('tie');
+                    }
+                else if(a==1){
+                    document.getElementById("dec").innerHTML="You Lose";
+                    //window.alert('You Lose')
+                    }
+                else{
+                    document.getElementById("dec").innerHTML="You Win";
+                    //window.alert('You won')
+                    }
+            }
+
+        </script>
+    
+</body>
+</html>
